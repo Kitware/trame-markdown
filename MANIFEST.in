@@ -1,0 +1,4 @@
+graft trame_markdown/module/serve/dist/fonts
+graft trame_markdown/module/serve/dist/img
+recursive-include trame_markdown/module/serve/dist *vue.umd.min.js *vue.css
+include trame_markdown/LICENSE
