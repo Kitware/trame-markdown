@@ -38,3 +38,8 @@ class Markdown(AbstractElement):
 
     def update(self, _md_content, **kwargs):
         self.server.state[self._key] = _md_content
+
+
+__all__ = [
+    "Markdown",
+]
