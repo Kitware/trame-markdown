@@ -3,8 +3,6 @@ from trame_markdown import module
 
 
 class Markdown(AbstractElement):
-    _next_md_id = 0
-
     """
     Create a markdown viewer element
 
@@ -22,6 +20,7 @@ class Markdown(AbstractElement):
     ... \"\"\"
     >>> component = Markdown(content=("document2", content))
     """
+    _next_md_id = 0
 
     def __init__(self, _md_content="**Some Mardown content**", **kwargs):
         super().__init__("markdown-it-vue", **kwargs)
@@ -36,7 +35,22 @@ class Markdown(AbstractElement):
             self.server.state[self._key] = _md_content
             self._attributes["content"] = f':content="{self._key}"'
 
+    @property
+    def key(self):
+        """Return the name of the state variable used internally"""
+        return self._key
+
+    @property
+    def md_content(self):
+        """Return the markdown content currently used for that widget"""
+        return self.server.state[self._key]
+
     def update(self, _md_content, **kwargs):
+        """
+        Update the Markdown content to show.
+
+        :param _md_content: Markdown syntax as string
+        """
         self.server.state[self._key] = _md_content
 
 
