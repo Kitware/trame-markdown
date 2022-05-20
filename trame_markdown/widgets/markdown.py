@@ -1,3 +1,4 @@
+from msilib.schema import Error
 from trame_client.widgets.core import AbstractElement
 from trame_markdown import module
 
@@ -23,6 +24,13 @@ class Markdown(AbstractElement):
     _next_md_id = 0
 
     def __init__(self, _md_content="**Some Mardown content**", **kwargs):
+        """
+        :param _md_content: Markdown to start with
+        :type _md_content: str
+
+        :param content: If provided it will be process as a regular attribute
+                        for the Markdown content handling.
+        """
         super().__init__("markdown-it-vue", **kwargs)
         if self.server:
             self.server.enable_module(module)
@@ -34,6 +42,10 @@ class Markdown(AbstractElement):
             self._key = f"trame__markdown_{Markdown._next_md_id}"
             self.server.state[self._key] = _md_content
             self._attributes["content"] = f':content="{self._key}"'
+        elif not isinstance(kwargs["content"], (tuple, list)):
+            raise Error("Markdown widget should only pass data as variable")
+        else:
+            self._key = kwargs["content"][0]
 
     @property
     def key(self):
