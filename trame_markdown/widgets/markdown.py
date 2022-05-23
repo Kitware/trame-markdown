@@ -1,4 +1,3 @@
-from msilib.schema import Error
 from trame_client.widgets.core import AbstractElement
 from trame_markdown import module
 
@@ -43,7 +42,7 @@ class Markdown(AbstractElement):
             self.server.state[self._key] = _md_content
             self._attributes["content"] = f':content="{self._key}"'
         elif not isinstance(kwargs["content"], (tuple, list)):
-            raise Error("Markdown widget should only pass data as variable")
+            raise Exception("Markdown widget should only pass data as variable")
         else:
             self._key = kwargs["content"][0]
 
