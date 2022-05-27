@@ -20,6 +20,7 @@ class Markdown(AbstractElement):
     ... \"\"\"
     >>> component = Markdown(content=("document2", content))
     """
+
     _next_md_id = 0
 
     def __init__(self, _md_content="**Some Mardown content**", **kwargs):
