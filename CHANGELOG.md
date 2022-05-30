@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v2.0.2 (2022-05-30)
+### Fix
+* **js:** Install client before uploading to pypi ([`73c7b4a`](https://github.com/Kitware/trame-markdown/commit/73c7b4ae3dfc4b7ec414d0fdbccea50fd4f8761b))
+
 ## v2.0.1 (2022-05-27)
 ### Fix
 * **CI:** Add initial CI with semantic-release ([`d7a23af`](https://github.com/Kitware/trame-markdown/commit/d7a23afb877c799cb8c9a10ca60726f7df712e6c))
