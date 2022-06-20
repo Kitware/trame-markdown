@@ -1,6 +1,10 @@
 Markdown renderer for trame
 ===========================================================================
 
+.. image:: https://github.com/Kitware/trame-markdown/actions/workflows/test_and_release.yml/badge.svg
+    :target: https://github.com/Kitware/trame-markdown/actions/workflows/test_and_release.yml
+    :alt: Test and Release
+
 trame-markdown extend trame **widgets** with a component that is capable of rendering Markdown syntax.
 Markdown integration into trame allow user to display markdown content easily. If you want are wondering what Markdown is, you can look at `some online guides <https://www.markdownguide.org/basic-syntax/>`_.
 
