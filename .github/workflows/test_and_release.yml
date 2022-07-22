@@ -87,7 +87,7 @@ jobs:
           curl -L https://registry.npmjs.org/markdown-it-vue/-/markdown-it-vue-1.1.7.tgz | tar --strip-components=1 -xzv
 
       - name: Python Semantic Release
-        uses: relekang/python-semantic-release@v7.28.1
+        uses: relekang/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           repository_username: __token__
