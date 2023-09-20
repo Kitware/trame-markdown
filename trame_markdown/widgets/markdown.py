@@ -31,7 +31,7 @@ class Markdown(AbstractElement):
         :param content: If provided it will be process as a regular attribute
                         for the Markdown content handling.
         """
-        super().__init__("markdown-it-vue", **kwargs)
+        super().__init__("markdown", **kwargs)
         if self.server:
             self.server.enable_module(module)
 

@@ -1,0 +1,62 @@
+{
+  "name": "trame-markdown",
+  "version": "0.0.0",
+  "description": "Vue component to expose markdown-it",
+  "repository": "Kitware/trame-markdown",
+  "main": "./dist/trame-markdown.umd.js",
+  "unpkg": "./dist/trame-markdown.umd.js",
+  "module": "./dist/trame-markdown.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/trame-markdown.mjs",
+      "require": "./dist/trame-markdown.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore --ignore-pattern public",
+    "semantic-release": "semantic-release"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "github-markdown-css": "^5.2.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-anchor": "^8.6.7",
+    "markdown-it-container": "^3.0.0",
+    "markdown-it-deflist": "^2.1.0",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-footnote": "^3.0.3",
+    "markdown-it-mathjax3": "^4.3.2",
+    "markdown-it-sub": "^1.0.0",
+    "markdown-it-sup": "^1.0.0",
+    "markdown-it-toc-done-right": "^4.2.0",
+    "nanoid": "^4.0.2",
+    "picocolors": "^1.0.0",
+    "shiki": "^0.14.4",
+    "shiki-processor": "^0.1.3",
+    "vitepress": "^1.0.0-rc.14"
+  },
+  "peerDependencies": {
+    "vue": "^2.7.0 || >=3.0.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.4",
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "prettier": "^2.7.1",
+    "semantic-release": "19.0.2",
+    "vite": "^4.1.0",
+    "vite-plugin-static-copy": "^0.17.0",
+    "vue": "^3.0.0"
+  },
+  "author": "Kitware Inc",
+  "license": "MIT",
+  "files": [
+    "dist/*",
+    "src/*",
+    "*.json",
+    "*.js"
+  ]
+}
