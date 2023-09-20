@@ -2,6 +2,24 @@
 
 <!--next-version-placeholder-->
 
+## v3.0.0 (2023-09-20)
+
+### Feature
+
+* **vue3:** Add support for both vue2/3 ([`2b663ce`](https://github.com/Kitware/trame-markdown/commit/2b663cef18c043f6262f63a13d333c341abb7ea9))
+
+### Breaking
+
+* The markdown setup and support is different than before ([`2b663ce`](https://github.com/Kitware/trame-markdown/commit/2b663cef18c043f6262f63a13d333c341abb7ea9))
+
+### Documentation
+
+* **coverage:** Remove codecov PR comment ([`d71a02e`](https://github.com/Kitware/trame-markdown/commit/d71a02e428b503bb480bc4a2651ca02502769c15))
+* **coverage:** Add .coveragerc ([`069b01a`](https://github.com/Kitware/trame-markdown/commit/069b01a47b2d3b208198bd4da55a885dad1f5a2a))
+* **ci:** Add coverage and codecov upload ([`df61677`](https://github.com/Kitware/trame-markdown/commit/df61677991c82c1f3af24a63fd50ef957547f4b1))
+* **readme:** Add CI badge ([`cc2f2db`](https://github.com/Kitware/trame-markdown/commit/cc2f2dbde0adf2123fa004864a4b9e1ba41ddf98))
+* **contributing:** Add CONTRIBUTING.rst ([`65d1c1f`](https://github.com/Kitware/trame-markdown/commit/65d1c1fbac917d3630fc438435bb978e51f26189))
+
 ## v2.0.2 (2022-05-30)
 ### Fix
 * **js:** Install client before uploading to pypi ([`73c7b4a`](https://github.com/Kitware/trame-markdown/commit/73c7b4ae3dfc4b7ec414d0fdbccea50fd4f8761b))
