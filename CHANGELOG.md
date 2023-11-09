@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v3.0.1 (2023-11-09)
+
+### Fix
+
+* **client:** Ci now build the client ([`3817804`](https://github.com/Kitware/trame-markdown/commit/3817804abb2bbcbfb477ed2823d76614075a5ab2))
+
 ## v3.0.0 (2023-09-20)
 
 ### Feature
