@@ -10,6 +10,8 @@ print(f"Using {server.client_type}")
 
 state, ctrl = server.state, server.controller
 
+markdown.theme_light()
+
 
 @state.change("file_name")
 def update_md(file_name, **kwargs):

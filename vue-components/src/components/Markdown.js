@@ -1,4 +1,4 @@
-import { ref, computed } from "vue";
+import { ref, watchEffect } from "vue";
 
 import "github-markdown-css";
 import "vitepress/dist/client/theme-default/styles/fonts.css";
@@ -94,10 +94,12 @@ export default {
   },
   setup(props) {
     const ready = ref(false);
+    const mdHTML = ref("Loading...");
     updateOnReady(ready);
-    const mdHTML = computed(
-      () => ready.value && markdown.render(props.content)
-    );
+    watchEffect(() => {
+      ready.value; // Access to re-execute when fully loaded
+      mdHTML.value = markdown.render(props.content);
+    })
     return { mdHTML };
   },
   template: '<div class="markdown-body vp-doc" v-html="mdHTML" />',

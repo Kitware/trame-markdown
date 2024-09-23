@@ -5,3 +5,8 @@ serve = {"__trame_markdown": serve_path}
 scripts = ["__trame_markdown/trame-markdown.umd.js"]
 styles = ["__trame_markdown/style.css"]
 vue_use = ["trame_markdown"]
+
+
+def force_theme(name):
+    global styles
+    styles = [styles[0], f"__trame_markdown/css/{name}.css"]

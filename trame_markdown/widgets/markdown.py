@@ -2,6 +2,14 @@ from trame_client.widgets.core import AbstractElement
 from trame_markdown import module
 
 
+def theme_light():
+    module.force_theme("light")
+
+
+def theme_dark():
+    module.force_theme("dark")
+
+
 class Markdown(AbstractElement):
     """
     Create a markdown viewer element
@@ -68,4 +76,6 @@ class Markdown(AbstractElement):
 
 __all__ = [
     "Markdown",
+    "theme_light",
+    "theme_dark",
 ]

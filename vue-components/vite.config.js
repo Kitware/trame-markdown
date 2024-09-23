@@ -18,15 +18,19 @@ export default defineConfig({
           src: "node_modules/shiki/languages",
           dest: ".",
         },
+        {
+          src: "css",
+          dest: ".",
+        },
       ],
     }),
   ],
   build: {
     lib: {
-      entry: "./src/main.js",
-      name: "trame_markdown",
-      formats: ["umd"],
-      fileName: "trame-markdown",
+        entry: "./src/main.js",
+        name: "trame_markdown",
+        formats: ["umd"],
+        fileName: "trame-markdown",
     },
     rollupOptions: {
       external: ["vue"],
