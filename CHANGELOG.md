@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v3.0.2 (2024-09-23)
+
+### Fix
+
+* **loading:** Pre-render before code lang loaded ([`6dd49a7`](https://github.com/Kitware/trame-markdown/commit/6dd49a7eab835b8399e441d3f7b9a0a09fa0c5af))
+
 ## v3.0.1 (2023-11-09)
 
 ### Fix
