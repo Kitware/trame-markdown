@@ -1,4 +1,6 @@
-Markdown renderer for trame
+.. |pypi_download| image:: https://img.shields.io/pypi/dm/trame-markdown
+
+Markdown renderer for trame |pypi_download|
 ===========================================================================
 
 .. image:: https://github.com/Kitware/trame-markdown/actions/workflows/test_and_release.yml/badge.svg
