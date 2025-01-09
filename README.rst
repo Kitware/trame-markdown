@@ -87,3 +87,27 @@ To update client side, just update the version and run the following commands.
     mkdir -p trame_markdown/module/serve
     cd trame_markdown/module/serve
     curl -L https://registry.npmjs.org/markdown-it-vue/-/markdown-it-vue-1.1.7.tgz | tar --strip-components=1 -xzv
+
+
+JavaScript dependency
+-----------------------------------------------------------
+
+This Python package bundle the following set of libraries:
+
+* ``github-markdown-css@5.2.0``
+* ``markdown-it@13.0.1``
+* ``markdown-it-anchor@8.6.7``
+* ``markdown-it-container@3.0.0``
+* ``markdown-it-deflist@2.1.0``
+* ``markdown-it-emoji@2.0.2``
+* ``markdown-it-footnote@3.0.3``
+* ``markdown-it-mathjax3@4.3.2``
+* ``markdown-it-sub@1.0.0``
+* ``markdown-it-sup@1.0.0``
+* ``markdown-it-toc-done-right@4.2.0``
+* ``nanoid@4.0.2``
+* ``picocolors@1.0.0``
+* ``shiki@0.14.4``
+* ``shiki-processor@0.1.3``
+
+If you would like us to upgrade any of those dependencies, `please reach out <https://www.kitware.com/trame/>`_.
