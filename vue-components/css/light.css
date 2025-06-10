@@ -43,3 +43,34 @@
   --color-attention-subtle: #fff8c5;
   --color-danger-fg: #cf222e;
 }
+
+/* Base styles for custom blocks, ensure these are sensible defaults or additions */
+.custom-block {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left-width: 0.25rem; /* Adjusted for a slightly thinner border */
+  border-left-style: solid;
+  border-radius: 0.25rem;
+  color: var(--color-fg-default); /* Default text color for content */
+}
+
+.custom-block .custom-block-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Success container styles */
+.custom-block.success {
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg, #dafbe1); /* Greenish background */
+}
+.custom-block.success .custom-block-title {
+  color: #3C3C43;
+}
+
+/* Error container styles */
+.custom-block.error {
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg, #ffebe9);
+}
+.custom-block.error .custom-block-title {
+  color: #3C3C43;
+}

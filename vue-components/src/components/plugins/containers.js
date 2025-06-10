@@ -7,6 +7,8 @@ export const containerPlugin = (md, options) => {
     .use(...createContainer("info", "INFO", md))
     .use(...createContainer("warning", "WARNING", md))
     .use(...createContainer("danger", "DANGER", md))
+    .use(...createContainer("success", "SUCCESS", md))
+    .use(...createContainer("error", "ERROR", md))
     .use(...createContainer("details", "Details", md))
     // explicitly escape Vue syntax
     .use(container, "v-pre", {
