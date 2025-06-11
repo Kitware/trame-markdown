@@ -59,7 +59,7 @@ class MarkdownViewerApp(TrameApp):
         self.state.current_markdown_text = ""
 
     def _build_ui(self):
-        with SinglePageLayout(self.server) as layout:
+        with SinglePageLayout(self.server, theme=("theme_mode", "light")) as layout:
             layout.title.set_text(self.state.trame__title)
 
             with layout.toolbar:
@@ -71,10 +71,23 @@ class MarkdownViewerApp(TrameApp):
                     hide_details=True,
                     style="max-width: 300px; margin-right: 16px;",
                 )
+                vuetify3.VCheckbox(
+                    v_model=("theme_mode", "light"),
+                    true_icon="mdi-lightbulb-off-outline",
+                    false_icon="mdi-lightbulb-outline",
+                    true_value="dark",
+                    false_value="light",
+                    classes="mx-1",
+                    hide_details=True,
+                    dense=True,
+                )
 
             with layout.content:
                 with vuetify3.VContainer(fluid=True, classes="pa-4"):
-                    md = markdown.Markdown(classes="pa-4 mx-2")
+                    md = markdown.Markdown(
+                        classes="pa-4 mx-2",
+                        theme="(self.state.theme_mode ? 'dark' : 'light')",
+                    )
                     self.ctrl.md_update = md.update
 
     @change("active_md_file")
@@ -86,6 +99,9 @@ class MarkdownViewerApp(TrameApp):
         else:
             self.ctrl.md_update(f"# Error\n\nFile not found: `{self.state.active_md_file}`")
 
+    @change("theme_mode")
+    def update_theme_mode(self, **kwargs):
+        self.update_markdown_view()
 
 if __name__ == "__main__":
     app = MarkdownViewerApp()
