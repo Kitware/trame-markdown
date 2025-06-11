@@ -97,7 +97,9 @@ class MarkdownViewerApp(TrameApp):
             with open(file_path, encoding="utf-8") as f:
                 self.ctrl.md_update(f.read())
         else:
-            self.ctrl.md_update(f"# Error\n\nFile not found: `{self.state.active_md_file}`")
+            self.ctrl.md_update(
+                f"# Error\n\nFile not found: `{self.state.active_md_file}`"
+            )
 
     @change("theme_mode")
     def update_theme_mode(self, **kwargs):
