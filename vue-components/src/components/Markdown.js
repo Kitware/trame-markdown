@@ -9,7 +9,7 @@ import "vitepress/dist/client/theme-default/styles/components/vp-code.css";
 import "vitepress/dist/client/theme-default/styles/components/vp-code-group.css";
 import "vitepress/dist/client/theme-default/styles/components/custom-block.css";
 import 'katex/dist/katex.min.css';
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import anchorPlugin from "markdown-it-anchor";
 import MarkdownIt from "markdown-it";
 import MarkdownItEmoji from "markdown-it-emoji";
@@ -108,18 +108,6 @@ export default {
     updateOnReady(ready);
 
     onMounted(async () => {
-      // Dynamically load Font Awesome CSS if not already present
-      const faCssId = 'font-awesome-css';
-      if (!document.getElementById(faCssId)) {
-        const link = document.createElement('link');
-        link.id = faCssId;
-        link.rel = 'stylesheet';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css';
-        link.integrity = 'sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==';
-        link.crossOrigin = 'anonymous';
-        link.referrerPolicy = 'no-referrer';
-        document.head.appendChild(link);
-      }
       mermaid.initialize({
         startOnLoad: false, // We'll trigger it manually
         // theme: 'neutral' // Optional: example theme, like 'neutral', 'dark', 'forest', 'default'
