@@ -30,6 +30,7 @@
     "@widcardw/markdown-it-asciimath": "^0.5.5",
     "katex": "^0.16.10",
     "@kazumatu981/markdown-it-fontawesome": "^1.0.4",
+    "@fortawesome/fontawesome-free": "^6.5.2",
 
     "markdown-it-mermaid": "^0.2.5",
     "markdown-it-sub": "^1.0.0",
