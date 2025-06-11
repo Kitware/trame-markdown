@@ -10,6 +10,7 @@ import "vitepress/dist/client/theme-default/styles/components/vp-code-group.css"
 import "vitepress/dist/client/theme-default/styles/components/custom-block.css";
 import 'katex/dist/katex.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
+
 import anchorPlugin from "markdown-it-anchor";
 import MarkdownIt from "markdown-it";
 import MarkdownItEmoji from "markdown-it-emoji";
@@ -25,7 +26,6 @@ import { containerPlugin } from "./plugins/containers";
 import { preWrapperPlugin } from "./plugins/preWrapper";
 import { highlight, updateOnReady } from "./plugins/highlighter";
 import markdownItMermaid from 'markdown-it-mermaid';
-import "../../css/light.css";
 import mermaid from 'mermaid';
 
 // eslint-disable-next-line no-control-regex
@@ -101,11 +101,30 @@ export default {
       type: String,
       default: "**Hello** __World__",
     },
+    theme: {
+      type: String,
+      default: "light",
+    },
   },
   setup(props) {
     const ready = ref(false);
     const mdHTML = ref("Loading...");
     updateOnReady(ready);
+
+    watchEffect(() => {
+      const themeStyleId = 'trame-markdown-theme';
+      let styleLink = document.getElementById(themeStyleId);
+      if (!styleLink) {
+        styleLink = document.createElement('link');
+        styleLink.id = themeStyleId;
+        styleLink.rel = 'stylesheet';
+        document.head.appendChild(styleLink);
+      }
+      const themeUrl = props.theme === 'dark'
+        ? new URL('../../css/dark.css', import.meta.url).href
+        : new URL('../../css/light.css', import.meta.url).href;
+      styleLink.href = themeUrl;
+    });
 
     onMounted(async () => {
       mermaid.initialize({
