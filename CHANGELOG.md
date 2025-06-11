@@ -2,6 +2,22 @@
 
 <!--next-version-placeholder-->
 
+## v3.1.0 (2025-06-11)
+
+### Feature
+
+* **theme:** Implement dynamic light/dark theme switching ([`9dfdb53`](https://github.com/Kitware/trame-markdown/commit/9dfdb532fe6ebc3503aced164b7a9ee05ea0eef6))
+
+### Fix
+
+* **fontawesome:** Replace CDN with local npm package ([`5c5d8a7`](https://github.com/Kitware/trame-markdown/commit/5c5d8a7ac6da562b19fc4770dc2a7e42d2941d51))
+* **plugins:** Fix ASCIIMath, Mermaid, and Fontawesome plugins, while adding alerts for success and error. ([`e2dd791`](https://github.com/Kitware/trame-markdown/commit/e2dd791dfcf0b5a4fb08b48553d16f0fe4a9c128))
+
+### Documentation
+
+* **js:** List JS dependency ([`f6cdc26`](https://github.com/Kitware/trame-markdown/commit/f6cdc26e0086a5def66e6ac397c17275aee575fd))
+* Update README.rst ([`3aa2a11`](https://github.com/Kitware/trame-markdown/commit/3aa2a1179550487c040354984aa687b6346ee2b8))
+
 ## v3.0.2 (2024-09-23)
 
 ### Fix
