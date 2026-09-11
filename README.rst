@@ -1,4 +1,4 @@
-.. |pypi_download| image:: https://img.shields.io/pypi/dm/trame-markdown
+.. |pypi_download| image:: https://kitware.github.io/trame/downloads/trame-markdown.svg
 
 Markdown renderer for trame |pypi_download|
 ===========================================================================
